@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 import React, { Component } from "react";
 class Navbar extends Component {
@@ -12,9 +13,9 @@ class Navbar extends Component {
     return (
       <nav id="navbar">
         <ul>
-          <a href="#"><li>Home</li></a>
-          <a href="#"><li>Contact</li></a>
-          <a href="#"><li>About</li></a>
+          <Link to={"Home"}><li>Home</li></Link>
+          <Link to={"Contact"}><li>Contact</li></Link>
+          <Link to={"About"}><li>About</li></Link>
         </ul>
 
         <div className="nav-details">

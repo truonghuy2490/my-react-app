@@ -3,11 +3,21 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Contact from './components/Contact';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route index element={<App/>} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<h1>About Page</h1>} />
+        {/* Catch all */}
+        <Route path="*" element={<h1>NOT FOUND</h1>} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
